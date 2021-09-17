@@ -1,34 +1,45 @@
 const submit = document.querySelector('form')
 
 function handleInterestRate () {
-  const prest = document.querySelectorAll('table tr')
-  const valor = Number(document.querySelector('#valor').value)
+  const tableRow = document.querySelectorAll('table tr')
+  const results = document.querySelectorAll('.results input')
+  const valorI = Number(document.querySelector('#valor').value)
   const prazoI = Number(document.querySelector('#prazoI').value)
   const jurosI = Number(document.querySelector('#jurosI').value)
-  const amort1 = 240
-  const result = valor*((1 + jurosI)**prazoI)
+
+  // Prazo(meses) - Juros ao mês - Juros acumulados //
+  const prazoF = prazoI*12
+  const jurosF = ((1+jurosI)**(1/12)) - 1  
+  let jurosAcumulados = 0;
+
+  //Calculo Juros acumulados//
+  for (var p = 1; p <= prazoF; p++){
+    const amorti = valorI/prazoF
+    const sDevedor = (valorI)-(p*amorti)
+    const jurosMes = sDevedor*jurosF
+    jurosAcumulados = jurosAcumulados + jurosMes
+  }  
+
+  //Tabela - Amortização - Juros - Total //  
+  function tableFill () {
+    const rAmortiza = valorI/prazoF
+    const sDevedor = (valorI)-(i*rAmortiza)
+    const jurosTabela = sDevedor*jurosF
+    const total = rAmortiza+jurosTabela
+
+    if (u === 1) return rAmortiza.toFixed(2);
+    if (u === 2) return jurosTabela.toFixed(2);
+    if (u === 3) return total.toFixed(2);    
+  }
   
-const resultAmort = result/amort1
-
-function tableFill () {
-  if (u === 1) return resultAmort;
-  if (u === 2) return "hi";
-  if (u === 3) return "worked again";
-}
-
- for (var i = 1; i <= 5; i++) {
-  for (var u = 1; u <= 3; u++){
-    prest[i].children[u].textContent = tableFill ()
-    
+  for (var i = 1; i <= 5; i++) {
+    for (var u = 1; u <= 3; u++){
+      tableRow[i].children[u].textContent = tableFill ()      
   } }
 
-  console.log(valor)
-  console.log(prazoI)
-  console.log(jurosI)
-
+  results[0].value = prazoF
+  results[1].value = Number(jurosF.toFixed(4))
+  results[2].value = Number(jurosAcumulados.toFixed(2))
 }
 
 submit.addEventListener('submit', handleInterestRate)
-//const prest = document.querySelectorAll('table tr')
-
-//console.log(prest[1])
