@@ -1,6 +1,7 @@
-const submit = document.querySelector('form')
+const button = document.querySelector('#button')
 
 function handleInterestRate () {
+  // --------- Seletores ------------------//
   const tableRow = document.querySelectorAll('table tr')
   const results = document.querySelectorAll('.results input')
   const valorI = Number(document.querySelector('#valor').value)
@@ -20,7 +21,7 @@ function handleInterestRate () {
     jurosAcumulados = jurosAcumulados + jurosMes
   }  
 
-  //Tabela - Amortização - Juros - Total //  
+  //------Tabela[ Amortização - Juros - Total ]-----------//  
   function tableFill () {
     const rAmortiza = valorI/prazoF
     const sDevedor = (valorI)-(i*rAmortiza)
@@ -31,15 +32,18 @@ function handleInterestRate () {
     if (u === 2) return jurosTabela.toFixed(2);
     if (u === 3) return total.toFixed(2);    
   }
-  
+
+  // Construção da tabela //
   for (var i = 1; i <= 5; i++) {
     for (var u = 1; u <= 3; u++){
       tableRow[i].children[u].textContent = tableFill ()      
   } }
 
+  //Impressão resultados na tela //
   results[0].value = prazoF
   results[1].value = Number(jurosF.toFixed(4))
   results[2].value = Number(jurosAcumulados.toFixed(2))
+  return;
 }
 
-submit.addEventListener('submit', handleInterestRate)
+button.addEventListener('click', handleInterestRate)

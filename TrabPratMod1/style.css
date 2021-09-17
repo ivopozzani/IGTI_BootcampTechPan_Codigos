@@ -42,7 +42,11 @@ form > input:not([type='submit']) {
   box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.144);
 }
 
-input[type='submit'] {
+input[type='button']:hover {
+  transform: scale(1.05);
+}
+
+input[type='button'] {
   width: 80px;
   height: 30px;
   font-size: 0.7em;
