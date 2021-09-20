@@ -14,7 +14,7 @@ function handleInterestRate () {
   let jurosAcumulados = 0;
 
   //Calculo Juros acumulados//
-  for (var p = 1; p <= prazoF; p++){
+  for (var p = 0; p <= prazoF; p++){
     const amorti = valorI/prazoF
     const sDevedor = (valorI)-(p*amorti)
     const jurosMes = sDevedor*jurosF
@@ -24,7 +24,7 @@ function handleInterestRate () {
   //------Tabela[ Amortização - Juros - Total ]-----------//  
   function tableFill () {
     const rAmortiza = valorI/prazoF
-    const sDevedor = (valorI)-(i*rAmortiza)
+    const sDevedor = (valorI)-((i-1)*rAmortiza)
     const jurosTabela = sDevedor*jurosF
     const total = rAmortiza+jurosTabela
 
