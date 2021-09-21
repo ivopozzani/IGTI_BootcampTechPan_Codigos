@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>desafio</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Novo Desafio</h1>
+    <h2>Options</h2>
+    <label for="sort">Sort By:</label>
+    <input list="slist" id="sort" name="sort" />
+    <datalist id="slist">
+      <option value="Nome ascendente">Nome ascendente</option>
+      <option value="Nome descendente">Nome descendente</option>
+      <option value="Salário ascendente">Salário ascendente</option>
+      <option value="Salário descendente">Salário descendente</option>
+    </datalist>
+    <div class="filter">
+      <p>Filter by roles</p>
+      <form class="filterOptions">
+        <label
+          ><input type="checkbox" name="DatabAdm" id="DatabAdm" />Database
+          Administrator</label
+        >
+        <label
+          ><input type="checkbox" name="SQaA" id="SQaA" />Senior QA
+          Analyst</label
+        >
+        <label
+          ><input type="checkbox" name="JQaA" id="JQaA" />Junior QA
+          Analyst</label
+        >
+        <label
+          ><input type="checkbox" name="SWebDes" id="SWebDes" />Senior Web
+          Designer</label
+        >
+        <label
+          ><input type="checkbox" name="JWebDes" id="JWebDes" />Junior Web
+          Designer</label
+        >
+        <label
+          ><input type="checkbox" name="JWebDev" id="JWebDev" />Junior Web
+          Developer</label
+        >
+        <label
+          ><input type="checkbox" name="SWebDev" id="SWebDev" />Senior Web
+          Developer</label
+        >
+        <label
+          ><input type="checkbox" name="DataAnal" id="DataAnal" />Data
+          Analyst</label
+        >
+        <label
+          ><input type="checkbox" name="JDevoEng" id="JDevoEng" />Junior Devops
+          Engineer</label
+        >
+        <label
+          ><input type="checkbox" name="SDevoEng" id="SDevoEng" />Senior Devops
+          Engineer</label
+        >
+        <label
+          ><input type="checkbox" name="NetwAdm" id="NetwAdm" />Network
+          Administrator</label
+        >
+        <label
+          ><input type="checkbox" name="ProjMan" id="ProjMan" />Project
+          Manager</label
+        >
+      </form>
+      <h2>Employess</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+      </table>
+      <div class="app"></div>
+      <script src="./main.js"></script>
+    </div>
+  </body>
+</html>
