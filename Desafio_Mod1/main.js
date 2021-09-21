@@ -24,7 +24,9 @@ employeesPromise.then((resp) => {resp.json().then((employees) => {
 function myTable (employees, roles) {
 
 
-let employeeFilter = employees.filter((id) => id.role_id == 1)
+// let employeeFilter = employees.filter(function (id){
+//   if (id.role_id == 1 && id.role_id == 3) return true
+// })
 
 
 
