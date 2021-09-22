@@ -1,9 +1,26 @@
-// async function getHt () {
-//   let [employees, roles] = await Promise.all([fetchJson("http://localhost:3000/employees"), fetchJson("http://localhost:3000/roles"),]);
-//   console.log(employees, roles)
-// }
+const checkBox = document.querySelectorAll('.filterOptions input')
+let finalchecked = undefined
+function handleCheck () {
+  const checked = document.querySelectorAll('.filterOptions input:checked')
+  
+  var checkedList = []
+  for (let i = 0 ; i < checked.length ; i++) checkedList.push(checked[i].attributes.roleid.value)
+  
+  finalchecked = checkedList
+  console.log(finalchecked)
+}
 
-// getHt();
+
+checkBox.forEach((check) => check.addEventListener('change', handleCheck))
+console.log(checkBox)
+
+
+
+
+
+
+
+
 
 
 
@@ -16,24 +33,19 @@ employeesPromise.then((resp) => {resp.json().then((employees) => {
     document.querySelector('.app').innerHTML = table})});  
   })})
 
-// function sortTable () {
-// (id) => id.role_id == '2'
-
-// }
 
 function myTable (employees, roles) {
 
+  var test = [1,4]
 
-// let employeeFilter = employees.filter(function (id){
-//   if (id.role_id == 1 && id.role_id == 3) return true
-// })
+var filtered = employees.filter((employee) => {return test[0] == employee.role_id || test[3] == employee.role_id})
 
+console.log(filtered)
 
-
-let rows = employeeFilter.map((employee) => {
-  let role = roles.find(role => role.id == employee.role_id);
+// let rows = employees.map((employee) => {
+//   let role = roles.find(role => role.id == employee.role_id);
   
-  return `<tr><td>${employee.id}</td><td>${employee.name}</td><td>${role.name}</td><td>${employee.salary}</td></tr>`})
+//   return `<tr><td>${employee.id}</td><td>${employee.name}</td><td>${role.name}</td><td>${employee.salary}</td></tr>`})
 
-return `<table>${rows.join("")}</table>`;
+// return `<table>${rows.join("")}</table>`;
 }
