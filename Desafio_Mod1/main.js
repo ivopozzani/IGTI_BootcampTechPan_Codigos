@@ -22,7 +22,7 @@ let checkedList = [1]
   
   function solution3(){
     let empPromise = fetchJSON("http://localhost:3000/employees");
-    let rolesPromise = fetchJSON("http://localhost:3000/roles");
+    let rolesPromise = fetchjson("http://localhost:3000/roles");
     Promise.all([empPromise, rolesPromise]).then((result) => {
       let employees = result[0];
       let roles = result[1];
