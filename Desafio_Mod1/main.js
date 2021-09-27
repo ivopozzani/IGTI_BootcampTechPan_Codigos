@@ -46,7 +46,6 @@ function myTableFiltered (employees, roles) {
   
   filtered = employees.filter((employee) => {return checkedList[0] == employee.role_id || checkedList[1] == employee.role_id || checkedList[2] == employee.role_id || checkedList[3] == employee.role_id || checkedList[4] == employee.role_id || checkedList[5] == employee.role_id || checkedList[6] == employee.role_id || checkedList[7] == employee.role_id || checkedList[8] == employee.role_id || checkedList[9] == employee.role_id || checkedList[10] == employee.role_id || checkedList[11] == employee.role_id})
   
-  
   if (sort.value === 'Nome descendente') {filtered.sort((a, b) => {
     if (a.name > b.name) {return -1}
   })} else if (sort.value === 'Salário ascendente') {filtered.sort((a, b) => {
