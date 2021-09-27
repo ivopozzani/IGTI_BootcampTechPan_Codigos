@@ -8,121 +8,141 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Novo Desafio</h1>
-    <h2>Options</h2>
-    <label for="sort">Sort By:</label>
-    <input list="slist" id="sort" name="sort" placeholder="Nome ascendente" />
-    <datalist id="slist">
-      <option value="Nome ascendente">Nome ascendente</option>
-      <option value="Nome descendente">Nome descendente</option>
-      <option value="Salário ascendente">Salário ascendente</option>
-      <option value="Salário descendente">Salário descendente</option>
-    </datalist>
-    <div class="filter">
-      <p>Filter by roles</p>
-      <form class="filterOptions">
-        <label
-          ><input
-            data-roleid="1"
-            type="checkbox"
-            name="DatabAdm"
-            id="DatabAdm"
-          />Database Administrator</label
-        >
-        <label
-          ><input data-roleid="2" type="checkbox" name="SQaA" id="SQaA" />Senior
-          QA Analyst</label
-        >
-        <label
-          ><input data-roleid="3" type="checkbox" name="JQaA" id="JQaA" />Junior
-          QA Analyst</label
-        >
-        <label
-          ><input
-            data-roleid="4"
-            type="checkbox"
-            name="SWebDes"
-            id="SWebDes"
-          />Senior Web Designer</label
-        >
-        <label
-          ><input
-            data-roleid="5"
-            type="checkbox"
-            name="JWebDes"
-            id="JWebDes"
-          />Junior Web Designer</label
-        >
-        <label
-          ><input
-            data-roleid="6"
-            type="checkbox"
-            name="JWebDev"
-            id="JWebDev"
-          />Junior Web Developer</label
-        >
-        <label
-          ><input
-            data-roleid="7"
-            type="checkbox"
-            name="SWebDev"
-            id="SWebDev"
-          />Senior Web Developer</label
-        >
-        <label
-          ><input
-            data-roleid="8"
-            type="checkbox"
-            name="DataAnal"
-            id="DataAnal"
-          />Data Analyst</label
-        >
-        <label
-          ><input
-            data-roleid="9"
-            type="checkbox"
-            name="JDevoEng"
-            id="JDevoEng"
-          />Junior Devops Engineer</label
-        >
-        <label
-          ><input
-            data-roleid="10"
-            type="checkbox"
-            name="SDevoEng"
-            id="SDevoEng"
-          />Senior Devops Engineer</label
-        >
-        <label
-          ><input
-            data-roleid="11"
-            type="checkbox"
-            name="NetwAdm"
-            id="NetwAdm"
-          />Network Administrator</label
-        >
-        <label
-          ><input
-            data-roleid="12"
-            type="checkbox"
-            name="ProjMan"
-            id="ProjMan"
-          />Project Manager</label
-        >
-      </form>
-      <h2>Employess</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Role</th>
-            <th>Salary</th>
-          </tr>
-        </thead>
-        <tbody class="tbody"></tbody>
-      </table>
-      <div class="app"></div>
+    <h1>Desafio - Lista de colaboradores e suas funções com Back-End</h1>
+    <div class="flex">
+      <div class="optflex">
+        <h2>Options</h2>
+        <label for="sort">Sort By:</label>
+        <input
+          list="slist"
+          id="sort"
+          name="sort"
+          placeholder="Nome ascendente"
+          onfocus="this.value=''"
+        />
+        <datalist id="slist">
+          <option value="Nome ascendente">Nome ascendente</option>
+          <option value="Nome descendente">Nome descendente</option>
+          <option value="Salário ascendente">Salário ascendente</option>
+          <option value="Salário descendente">Salário descendente</option>
+        </datalist>
+        <div class="filter">
+          <p>Filter by roles</p>
+          <form class="filterOptions">
+            <label
+              ><input
+                data-roleid="1"
+                type="checkbox"
+                name="DatabAdm"
+                id="DatabAdm"
+              />Database Administrator</label
+            >
+            <label
+              ><input
+                data-roleid="2"
+                type="checkbox"
+                name="SQaA"
+                id="SQaA"
+              />Senior QA Analyst</label
+            >
+            <label
+              ><input
+                data-roleid="3"
+                type="checkbox"
+                name="JQaA"
+                id="JQaA"
+              />Junior QA Analyst</label
+            >
+            <label
+              ><input
+                data-roleid="4"
+                type="checkbox"
+                name="SWebDes"
+                id="SWebDes"
+              />Senior Web Designer</label
+            >
+            <label
+              ><input
+                data-roleid="5"
+                type="checkbox"
+                name="JWebDes"
+                id="JWebDes"
+              />Junior Web Designer</label
+            >
+            <label
+              ><input
+                data-roleid="6"
+                type="checkbox"
+                name="JWebDev"
+                id="JWebDev"
+              />Junior Web Developer</label
+            >
+            <label
+              ><input
+                data-roleid="7"
+                type="checkbox"
+                name="SWebDev"
+                id="SWebDev"
+              />Senior Web Developer</label
+            >
+            <label
+              ><input
+                data-roleid="8"
+                type="checkbox"
+                name="DataAnal"
+                id="DataAnal"
+              />Data Analyst</label
+            >
+            <label
+              ><input
+                data-roleid="9"
+                type="checkbox"
+                name="JDevoEng"
+                id="JDevoEng"
+              />Junior Devops Engineer</label
+            >
+            <label
+              ><input
+                data-roleid="10"
+                type="checkbox"
+                name="SDevoEng"
+                id="SDevoEng"
+              />Senior Devops Engineer</label
+            >
+            <label
+              ><input
+                data-roleid="11"
+                type="checkbox"
+                name="NetwAdm"
+                id="NetwAdm"
+              />Network Administrator</label
+            >
+            <label
+              ><input
+                data-roleid="12"
+                type="checkbox"
+                name="ProjMan"
+                id="ProjMan"
+              />Project Manager</label
+            >
+          </form>
+        </div>
+      </div>
+      <div class="listflex">
+        <h2>Employees<span></span></h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody class="tbody"></tbody>
+        </table>
+      </div>
+
       <script src="./main.js"></script>
     </div>
   </body>

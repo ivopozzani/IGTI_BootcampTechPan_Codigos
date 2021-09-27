@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --mainfont: #384028;
+  --bkgc: #e9eff2;
+  --bkgctable: #ccd9cd;
+  --border: #6a736b;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--mainfont);
+  background-color: var(--bkgc);
+  max-width: 1250px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: initial;
+}
+
+.optflex {
+  flex: 0 1 auto;
+  padding: 10px;
+}
+
+.optflex input {
+  font-weight: 600;
+  text-align: center;
+  margin: 5px;
+  padding: 2px;
+}
+
+.filter {
+  padding: 5px;
+  margin: 10px;
+}
+
+.filter p {
+  display: inline;
+  font-weight: 600;
+  background-color: var(--bkgc);
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  top: 9px;
+  z-index: 2;
+  margin-left: 50px;
+}
+
+.filterOptions {
+  border: var(--border) solid 1px;
+  padding: 12px 5px 5px 5px;
+}
+
+.filterOptions label {
+  display: block;
+}
+
+.filterOptions input {
+  font-weight: 800;
+  margin: 4px;
+}
+
+.listflex {
+  flex: 1 1 420px;
+  height: 90vh;
+  overflow: auto;
+}
+
+.listflex table {
+  background-color: var(--bkgctable);
+  text-align: left;
+  width: 100%;
+  padding: 5px;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+
+.listflex table th,
+.listflex table td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.listflex thead {
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  height: 1.5rem;
+}
