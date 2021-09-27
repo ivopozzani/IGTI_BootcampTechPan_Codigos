@@ -29,7 +29,8 @@ function myTable (employees, roles) {
   
 
   for (let i = 0 ; i < checked.length ; i++) checkedList.push(checked[i].attributes['data-roleid'].value)
-    
+  
+  
   
   filtered = employees.filter((employee) => {return checkedList[0] == employee.role_id || checkedList[1] == employee.role_id || checkedList[2] == employee.role_id || checkedList[3] == employee.role_id || checkedList[4] == employee.role_id || checkedList[5] == employee.role_id || checkedList[6] == employee.role_id || checkedList[7] == employee.role_id || checkedList[8] == employee.role_id || checkedList[9] == employee.role_id || checkedList[10] == employee.role_id || checkedList[11] == employee.role_id})
   
