@@ -43,7 +43,7 @@ function handleInterestRate () {
   results[0].value = prazoF
   results[1].value = Number(jurosF.toFixed(4))
   results[2].value = Number(jurosAcumulados.toFixed(2))
-  return;
+  return
 }
 
 button.addEventListener('click', handleInterestRate)
