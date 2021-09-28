@@ -4,9 +4,9 @@ function handleInterestRate () {
   // --------- Seletores ------------------//
   const tableRow = document.querySelectorAll('table tr')
   const results = document.querySelectorAll('.results input')
-  const valorI = Number(document.querySelector('#valor').value)
-  const prazoI = Number(document.querySelector('#prazoI').value)
-  const jurosI = Number(document.querySelector('#jurosI').value)
+  const valorI = document.querySelector('#valor').valueAsNumber
+  const prazoI = document.querySelector('#prazoI').valueAsNumber
+  const jurosI = document.querySelector('#jurosI').valueAsNumber
 
   // Prazo(meses) - Juros ao mês - Juros acumulados //
   const prazoF = prazoI*12
