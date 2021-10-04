@@ -1,0 +1,22 @@
+<h2>{{ title }}</h2>
+<p>
+  Escolha até {{ escolhaAte }} <span>({{ escolhas.length }} escolhas)</span>
+</p>
+
+<label *ngFor="let opcao of opcoes">
+  <span [ngSwitch]="escolhaAte">
+    <input
+      type="radio"
+      name="{{ title }}"
+      value="{{ opcao }}"
+      *ngSwitchCase="1"
+    />
+    <input
+      type="checkbox"
+      value="{{ opcao }}"
+      [disabled]="isDisabled"
+      *ngSwitchDefault
+    />
+  </span>
+  {{ opcao }}
+</label>
