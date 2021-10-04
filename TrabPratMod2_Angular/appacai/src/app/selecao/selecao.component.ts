@@ -19,18 +19,31 @@ export class SelecaoComponent {
   escolhas: string[] = [];
   isDisabled: boolean = false;
 
-  @HostListener('change', ['$event'])
-  onChange(event: any) {
-    if (event.target.checked) {
-      this.escolhas.push(event.target.value);
+  setChange(event: any) {
+    if (event.checked && this.escolhaAte != 1) {
+      this.escolhas.push(event.value);
       if (this.escolhaAte === this.escolhas.length) {
-        this.isDisabled = true;
-      } else {
-        let index = this.escolhas.indexOf(event.target.value);
-        this.escolhas.splice(index, 1);
+        const checked = document.querySelectorAll('input');
+        console.log(checked);
+        checked.forEach(function (el) {
+          if (!el.checked) {
+            el.disabled = true;
+          }
+        });
       }
-      console.log(event.target.value);
-      console.log(this.escolhas);
+    } else {
+      let index = this.escolhas.indexOf(event.value);
+      this.escolhas.splice(index, 1);
+      const checked = document.querySelectorAll('input');
+      console.log(checked);
+      checked.forEach(function (el) {
+        if (!el.checked) {
+          el.disabled = false;
+        }
+      });
     }
+    //console.log(event);
+    console.log(this.escolhas);
+    //console.log(this.isChecked);
   }
 }

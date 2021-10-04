@@ -11,10 +11,11 @@
       value="{{ opcao }}"
       *ngSwitchCase="1"
     />
+
     <input
+      (change)="setChange($event.target)"
       type="checkbox"
       value="{{ opcao }}"
-      [disabled]="isDisabled"
       *ngSwitchDefault
     />
   </span>
