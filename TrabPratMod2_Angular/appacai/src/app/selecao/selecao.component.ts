@@ -17,33 +17,25 @@ export class SelecaoComponent {
   @Input() escolhaAte: number = 0;
 
   escolhas: string[] = [];
-  isDisabled: boolean = false;
 
-  setChange(event: any) {
-    if (event.checked && this.escolhaAte != 1) {
+  setVol(event: any) {
+    this.escolhas = [];
+    this.escolhas.push(event.value);
+  }
+
+  setAdd(event: any) {
+    if (event.checked) {
       this.escolhas.push(event.value);
       if (this.escolhaAte === this.escolhas.length) {
-        const checked = document.querySelectorAll('input');
-        console.log(checked);
-        checked.forEach(function (el) {
-          if (!el.checked) {
-            el.disabled = true;
-          }
+        document.querySelectorAll('input').forEach((el) => {
+          !el.checked ? (el.disabled = true) : null;
         });
       }
     } else {
-      let index = this.escolhas.indexOf(event.value);
-      this.escolhas.splice(index, 1);
-      const checked = document.querySelectorAll('input');
-      console.log(checked);
-      checked.forEach(function (el) {
-        if (!el.checked) {
-          el.disabled = false;
-        }
+      this.escolhas.splice(this.escolhas.indexOf(event.value), 1);
+      document.querySelectorAll('input').forEach((el) => {
+        !el.checked ? (el.disabled = false) : null;
       });
     }
-    //console.log(event);
-    console.log(this.escolhas);
-    //console.log(this.isChecked);
   }
 }

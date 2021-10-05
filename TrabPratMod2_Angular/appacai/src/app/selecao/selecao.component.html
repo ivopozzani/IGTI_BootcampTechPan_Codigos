@@ -1,23 +1,30 @@
 <h2>{{ title }}</h2>
-<p>
-  Escolha até {{ escolhaAte }} <span>({{ escolhas.length }} escolhas)</span>
-</p>
 
-<label *ngFor="let opcao of opcoes">
-  <span [ngSwitch]="escolhaAte">
+<div *ngIf="escolhaAte <= 1">
+  <label *ngFor="let opcao of opcoes">
     <input
+      (change)="setVol($event.target)"
       type="radio"
       name="{{ title }}"
       value="{{ opcao }}"
-      *ngSwitchCase="1"
     />
-
+    {{ opcao }}
+  </label>
+</div>
+<div *ngIf="escolhaAte > 1">
+  <p>
+    Escolha até {{ escolhaAte }}
+    <span
+      >({{ escolhas.length }}
+      {{ escolhas.length <= 1 ? "selecionado" : "selecionados" }})</span
+    >
+  </p>
+  <label *ngFor="let opcao of opcoes">
     <input
-      (change)="setChange($event.target)"
+      (change)="setAdd($event.target)"
       type="checkbox"
       value="{{ opcao }}"
-      *ngSwitchDefault
     />
-  </span>
-  {{ opcao }}
-</label>
+    {{ opcao }}
+  </label>
+</div>
