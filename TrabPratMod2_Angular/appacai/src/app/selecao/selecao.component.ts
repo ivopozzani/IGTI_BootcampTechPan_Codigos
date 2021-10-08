@@ -18,24 +18,20 @@ export class SelecaoComponent {
 
   escolhas: string[] = [];
 
-  setVol(event: any) {
-    this.escolhas = [];
-    this.escolhas.push(event.value);
+  add(opcao: string) {
+    if (this.escolhaAte === 1) {
+      this.escolhas = [opcao];
+    } else {
+      if (this.escolhas.indexOf(opcao) === -1) {
+        this.escolhas.push(opcao);
+      } else {
+        this.escolhas.splice(this.escolhas.indexOf(opcao), 1);
+      }
+    }
+    console.log(this.escolhas);
   }
 
-  setAdd(event: any) {
-    if (event.checked) {
-      this.escolhas.push(event.value);
-      if (this.escolhaAte === this.escolhas.length) {
-        document.querySelectorAll('input').forEach((el) => {
-          !el.checked ? (el.disabled = true) : null;
-        });
-      }
-    } else {
-      this.escolhas.splice(this.escolhas.indexOf(event.value), 1);
-      document.querySelectorAll('input').forEach((el) => {
-        !el.checked ? (el.disabled = false) : null;
-      });
-    }
+  isChecked(opcao: string): boolean {
+    return this.escolhas.indexOf(opcao) == -1;
   }
 }
