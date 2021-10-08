@@ -1,0 +1,25 @@
+<div class="cabecalho">
+  <div class="titulo">{{ title }}</div>
+
+  <p class="status" *ngIf="escolhaAte > 1">
+    Escolha até {{ escolhaAte }}
+    <span *ngIf="escolhas.length !== 0"
+      >({{ escolhas.length }}
+      {{ escolhas.length === 1 ? "selecionado" : "selecionados" }})</span
+    >
+  </p>
+</div>
+<div class="opcao" *ngFor="let opcao of opcoes">
+  <label>
+    <input
+      (change)="add(opcao)"
+      [type]="escolhaAte === 1 ? 'radio' : 'checkbox'"
+      [value]="opcao"
+      [name]="title"
+      [disabled]="
+        escolhaAte > 1 && escolhas.length >= escolhaAte && isChecked(opcao)
+      "
+    />
+    {{ opcao }}
+  </label>
+</div>
