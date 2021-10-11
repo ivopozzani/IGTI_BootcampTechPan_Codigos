@@ -12,7 +12,11 @@
     </tr>
     <tr>
       <td>{{ item.descricao }}</td>
-      <td><Button (click)="buyList.add(cardapio[i])">Add</Button></td>
+      <td>
+        <Button mat-button color="accent" (click)="buyList.add(cardapio[i])"
+          >Add</Button
+        >
+      </td>
       <td>{{ item.preco | number: "1.2" }}</td>
     </tr>
   </ng-container>

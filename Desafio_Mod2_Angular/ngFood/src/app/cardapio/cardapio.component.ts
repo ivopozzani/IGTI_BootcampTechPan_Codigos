@@ -26,7 +26,6 @@ export class CardapioComponent implements OnInit {
       .get<Cardapio[]>('http://localhost:3000/cardapio')
       .subscribe((cardapio) => {
         this.cardapio = cardapio;
-        console.log(this.cardapio);
       });
   }
 }
