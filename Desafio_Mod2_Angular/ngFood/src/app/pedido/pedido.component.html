@@ -1,16 +1,22 @@
-<h2>Pedido</h2>
+<mat-toolbar>
+  <h2>Pedido</h2>
+</mat-toolbar>
 <table>
   <tr *ngFor="let item of buyList.buyList; let i = index">
     <td>{{ item.descricao }}</td>
     <td>{{ buyList.qntd[i] }} x</td>
-    <td>{{ item.preco | number: "1.2" }}</td>
+    <td>R$ {{ item.preco | number: "1.2" }}</td>
   </tr>
   <tr>
     <td>Total</td>
-    <td>{{ buyList.total | number: "1.2" }}</td>
+    <td>R$ {{ buyList.total | number: "1.2" }}</td>
   </tr>
 </table>
-<button routerLink="/cardapio">Incluir mais itens</button>
-<button (click)="buyList.clear()">Limpar</button>
-<button>Concluir</button>
+<button mat-raised-button color="primary" routerLink="/cardapio">
+  Incluir mais itens<mat-icon>add</mat-icon>
+</button>
+<button mat-flat-button color="accent" (click)="buyList.clear()">
+  Limpar<mat-icon>delete</mat-icon>
+</button>
+<button mat-flat-button>Concluir</button>
 <router-outlet></router-outlet>

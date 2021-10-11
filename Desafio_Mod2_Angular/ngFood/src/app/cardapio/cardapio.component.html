@@ -1,9 +1,16 @@
-<h2>Cardápio</h2>
-
-<span>Item: {{ buyList.count }}</span>
-<span><a routerLink="/pedido">Ver Pedido</a></span>
-<router-outlet></router-outlet>
-<span>{{ buyList.total | number: "1.2" }}</span>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <h2>Cardápio</h2>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <mat-icon matBadge=" {{ buyList.count }}" matBadgeColor="warn"
+      >shopping_cart</mat-icon
+    >
+    <span><a routerLink="/pedido">Ver Pedido</a></span>
+    <router-outlet></router-outlet>
+    <span>{{ buyList.total | number: "1.2" }}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
 
 <table>
   <ng-container *ngFor="let item of cardapio; let i = index; let first = first">
