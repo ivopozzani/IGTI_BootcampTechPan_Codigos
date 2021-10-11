@@ -1,6 +1,6 @@
 <h2>Cardápio</h2>
 
-<span>Item: {{ buyList.buyList.length }}</span>
+<span>Item: {{ buyList.count }}</span>
 <span><a routerLink="/pedido">Ver Pedido</a></span>
 <router-outlet></router-outlet>
 <span>{{ buyList.total | number: "1.2" }}</span>
