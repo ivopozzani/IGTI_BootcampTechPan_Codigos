@@ -2,11 +2,11 @@
 <table>
   <tr *ngFor="let item of buyList.buyList">
     <td>{{ item.descricao }}</td>
-    <td>{{ item.preco }}</td>
+    <td>{{ item.preco | number: "1.2" }}</td>
   </tr>
   <tr>
     <td>Total</td>
-    <td>{{ buyList.total }}</td>
+    <td>{{ buyList.total | number: "1.2" }}</td>
   </tr>
 </table>
 <button routerLink="/cardapio">Incluir mais itens</button>

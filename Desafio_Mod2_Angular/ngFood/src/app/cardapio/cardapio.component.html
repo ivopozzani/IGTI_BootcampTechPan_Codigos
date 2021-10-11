@@ -3,7 +3,7 @@
 <span>Item: {{ buyList.buyList.length }}</span>
 <span><a routerLink="/pedido">Ver Pedido</a></span>
 <router-outlet></router-outlet>
-<span>{{ buyList.total }}</span>
+<span>{{ buyList.total | number: "1.2" }}</span>
 
 <table>
   <ng-container *ngFor="let item of cardapio; let i = index; let first = first">
@@ -13,7 +13,7 @@
     <tr>
       <td>{{ item.descricao }}</td>
       <td><Button (click)="buyList.add(cardapio[i])">Add</Button></td>
-      <td>{{ item.preco }}</td>
+      <td>{{ item.preco | number: "1.2" }}</td>
     </tr>
   </ng-container>
 </table>
