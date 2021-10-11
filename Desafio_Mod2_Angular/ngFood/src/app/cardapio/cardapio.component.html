@@ -1,1 +1,19 @@
-<p>cardapio works!</p>
+<h2>Cardápio</h2>
+
+<span>Item: {{ buyList.buyList.length }}</span>
+<span><a routerLink="/pedido">Ver Pedido</a></span>
+<router-outlet></router-outlet>
+<span>{{ buyList.total }}</span>
+
+<table>
+  <ng-container *ngFor="let item of cardapio; let i = index; let first = first">
+    <tr *ngIf="first">
+      <th>{{ item.categoria }}</th>
+    </tr>
+    <tr>
+      <td>{{ item.descricao }}</td>
+      <td><Button (click)="buyList.add(cardapio[i])">Add</Button></td>
+      <td>{{ item.preco }}</td>
+    </tr>
+  </ng-container>
+</table>

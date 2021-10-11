@@ -1,0 +1,494 @@
+{
+    "cardapio": [
+        {
+            "categoria": "Sanduiches de Boi",
+            "descricao": "Hamburguer",
+            "preco": 13.90
+        },
+        {
+            "categoria": "Sanduiches de Boi",
+            "descricao": "X - Burguer",
+            "preco": 15.20
+        },
+        {
+            "categoria": "Sanduiches de Boi",
+            "descricao": "X - Egg Burguer",
+            "preco": 15.80
+        },
+        {
+            "categoria": "Sanduiches de Boi",
+            "descricao": "X - Bacon",
+            "preco": 16.20
+        },
+        {
+            "categoria": "Sanduiches de Boi",
+            "descricao": "X - Egg Bacon",
+            "preco": 16.70
+        },
+        {
+            "categoria": "Sanduiches de Boi",
+            "descricao": "Laçador",
+            "preco": 16.70
+        },
+        {
+            "categoria": "Sanduiches de Boi",
+            "descricao": "X - Tudo",
+            "preco": 17.70
+        },
+        {
+            "categoria": "Sanduiches de Frango",
+            "descricao": "Frango Light",
+            "preco": 18.30
+        },
+        {
+            "categoria": "Sanduiches de Frango",
+            "descricao": "X - Frango",
+            "preco": 15.20
+        },
+        {
+            "categoria": "Sanduiches de Frango",
+            "descricao": "X - Egg Frango",
+            "preco": 15.80
+        },
+        {
+            "categoria": "Sanduiches de Frango",
+            "descricao": "Bacon Frango",
+            "preco": 16.20
+        },
+        {
+            "categoria": "Sanduiches de Frango",
+            "descricao": "X - Egg Bacon Frango",
+            "preco": 16.70
+        },
+        {
+            "categoria": "Sanduiches de Frango",
+            "descricao": "Frango a Catupiry",
+            "preco": 17.90
+        },
+        {
+            "categoria": "Sanduiches de Frango",
+            "descricao": "X - Salada Frango",
+            "preco": 15.80
+        },
+        {
+            "categoria": "Sanduiches Diversos",
+            "descricao": "Misto Quente",
+            "preco": 6.60
+        },
+        {
+            "categoria": "Sanduiches Diversos",
+            "descricao": "Mistão",
+            "preco": 8.00
+        },
+        {
+            "categoria": "Sanduiches Diversos",
+            "descricao": "Vegetariano",
+            "preco": 15.80
+        },
+        {
+            "categoria": "Sanduiches Especiais",
+            "descricao": "Especial da Casa",
+            "preco": 24.40
+        },
+        {
+            "categoria": "Sanduiches Especiais",
+            "descricao": "Hamburguer de Picanha",
+            "preco": 17.40
+        },
+        {
+            "categoria": "Sanduiches Especiais",
+            "descricao": "X - Picanha",
+            "preco": 18.40
+        },
+        {
+            "categoria": "Sanduiches Especiais",
+            "descricao": "X - Egg Picanha",
+            "preco": 19.50
+        },
+        {
+            "categoria": "Sanduiches Especiais",
+            "descricao": "X - Egg Bacon Picanha",
+            "preco": 21.00
+        },
+        {
+            "categoria": "Sanduiches Especiais",
+            "descricao": "Picanha a Catupiry",
+            "preco": 21.90
+        },
+        {
+            "categoria": "Sanduiches Especiais",
+            "descricao": "Filé Mignon Burguer",
+            "preco": 17.40
+        },
+        {
+            "categoria": "Sanduiches Especiais",
+            "descricao": "X - Filé Mignon",
+            "preco": 18.50
+        },
+        {
+            "categoria": "Sanduiches Especiais",
+            "descricao": "X - Egg Filé Mignon",
+            "preco": 19.50
+        },
+        {
+            "categoria": "Sanduiches Especiais",
+            "descricao": "X - Egg Bacon Filé Mignon",
+            "preco": 21.00
+        },
+        {
+            "categoria": "Sanduiches Especiais",
+            "descricao": "Filé Mignon a Catupiry",
+            "preco": 21.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Bacon e Milho",
+            "preco": 29.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Mussarela",
+            "preco": 29.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Napolitana",
+            "preco": 29.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Presunto",
+            "preco": 29.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Marguerita",
+            "preco": 29.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Banana",
+            "preco": 29.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Quatro Queijos",
+            "preco": 29.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Calabresa",
+            "preco": 29.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza A Moda",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Frango a Catupiry",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Portuguesa",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Champignon",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Peperone",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Nordestina",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Frago a Bolonhesa",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Lombo Canadense",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Quatro Carnes",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Salaminho",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Atum",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Vegetariana",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Pizzas",
+            "descricao": "Pizza Palmito a Bolonhesa",
+            "preco": 39.90
+        },
+        {
+            "categoria": "Lasanha",
+            "descricao": "Lasanha à Bolonhesa",
+            "preco": 25.90
+        },
+        {
+            "categoria": "Lasanha",
+            "descricao": "Lasanha Frango à Catupiry",
+            "preco": 25.90
+        },
+        {
+            "categoria": "Macarrão na Chapa",
+            "descricao": "Macarrão à Bolonhesa",
+            "preco": 15.90
+        },
+        {
+            "categoria": "Macarrão na Chapa",
+            "descricao": "Macarrão ao Alho e Óleo",
+            "preco": 15.90
+        },
+        {
+            "categoria": "Pastelão",
+            "descricao": "Pastel de Carne",
+            "preco": 7.90
+        },
+        {
+            "categoria": "Pastelão",
+            "descricao": "Pastel de Frango",
+            "preco": 7.90
+        },
+        {
+            "categoria": "Pastelão",
+            "descricao": "Pastel Napolitano",
+            "preco": 7.90
+        },
+        {
+            "categoria": "Pastelão",
+            "descricao": "Pastel de Frango com Catupiry",
+            "preco": 9.40
+        },
+        {
+            "categoria": "Pastelão",
+            "descricao": "Pastel de Queijo (Mussarela)",
+            "preco": 7.90
+        },
+        {
+            "categoria": "Pastelão",
+            "descricao": "Pastel de Churros",
+            "preco": 9.40
+        },
+        {
+            "categoria": "Porções",
+            "descricao": "Porção de Batata Frita 400gr",
+            "preco": 15.90
+        },
+        {
+            "categoria": "Porções",
+            "descricao": "Porção de Batata Frita 400gr com Mussarela e Bacon",
+            "preco": 22.90
+        },
+        {
+            "categoria": "Porções",
+            "descricao": "Quibinho (12 unidades)",
+            "preco": 14.50
+        },
+        {
+            "categoria": "Porções",
+            "descricao": "Strogonoff de frango",
+            "preco": 17.90
+        },
+        {
+            "categoria": "Porções",
+            "descricao": "Porção de Filé Mignon acebolado com fritas e mussarela",
+            "preco": 89.90
+        },
+        {
+            "categoria": "Porções",
+            "descricao": "Tilápia c/ fritas",
+            "preco": 59.90
+        },
+        {
+            "categoria": "Porções",
+            "descricao": "Contra Filé c/ fritas",
+            "preco": 69.90
+        },
+        {
+            "categoria": "Porções",
+            "descricao": "Picanha c/ fritas",
+            "preco": 79.90
+        },
+        {
+            "categoria": "Creme de Açai",
+            "descricao": "Creme de açai (300g)",
+            "preco": 13.90
+        },
+        {
+            "categoria": "Creme de Açai",
+            "descricao": "Creme de açai (500g)",
+            "preco": 16.90
+        },
+        {
+            "categoria": "Creme de Açai",
+            "descricao": "Creme de açai (1kg)",
+            "preco": 29.90
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Suco de laranja natural (300 ml)",
+            "preco": 6.50
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Jarra de suco de laranja natural (700 ml)",
+            "preco": 12.90
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Jarra de suco de laranja natural (1500 ml)",
+            "preco": 22.90
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Limonada suiça (300 ml)",
+            "preco": 6.50
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Jarra de Limonada suiça (700 ml)",
+            "preco": 12.90
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Jarra de Limonada suiça (1500 ml)",
+            "preco": 22.90
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Acerola",
+            "preco": 6.50
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Abacaxi",
+            "preco": 6.50
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Abacaxi com hortelã",
+            "preco": 6.50
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Morango",
+            "preco": 6.50
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Maracujá",
+            "preco": 6.50
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Graviola",
+            "preco": 6.50
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Cacau",
+            "preco": 6.50
+        },
+        {
+            "categoria": "Sucos",
+            "descricao": "Açaí",
+            "preco": 8.90
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Refrigerante Ks",
+            "preco": 4.50
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Refrigerante Lata",
+            "preco": 5.50
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Refrigerante (600 ml)",
+            "preco": 6.50
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Refrigerante (2 litros)",
+            "preco": 9.50
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Refrigerante (1 litro)",
+            "preco": 7.50
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Refrigerante Coca-Cola (2 litros)",
+            "preco": 10.50
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Suco Lata",
+            "preco": 6.50
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Água sem gás",
+            "preco": 2.50
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Água com gás",
+            "preco": 3.00
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Cerveja latão",
+            "preco": 6.00
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Cerveja sem álcool lata",
+            "preco": 5.50
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Energético",
+            "preco": 11.00
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Smiirnoff Ice",
+            "preco": 11.00
+        },
+        {
+            "categoria": "Bebidas Diversas",
+            "descricao": "Cerveja long neck",
+            "preco": 7.00
+        }
+    ]
+}

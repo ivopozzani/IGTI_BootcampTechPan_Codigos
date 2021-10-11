@@ -1,1 +1,15 @@
-<p>pedido works!</p>
+<h2>Pedido</h2>
+<table>
+  <tr *ngFor="let item of buyList.buyList">
+    <td>{{ item.descricao }}</td>
+    <td>{{ item.preco }}</td>
+  </tr>
+  <tr>
+    <td>Total</td>
+    <td>{{ buyList.total }}</td>
+  </tr>
+</table>
+<button routerLink="/cardapio">Incluir mais itens</button>
+<button (click)="buyList.clear()">Limpar</button>
+<button>Concluir</button>
+<router-outlet></router-outlet>
