@@ -1,22 +1,29 @@
-<mat-toolbar>
+<mat-toolbar class="header" color="primary">
   <h2>Pedido</h2>
 </mat-toolbar>
-<table>
-  <tr *ngFor="let item of buyList.buyList; let i = index">
-    <td>{{ item.descricao }}</td>
-    <td>{{ buyList.qntd[i] }} x</td>
-    <td>R$ {{ item.preco | number: "1.2" }}</td>
-  </tr>
-  <tr>
-    <td>Total</td>
-    <td>R$ {{ buyList.total | number: "1.2" }}</td>
-  </tr>
-</table>
-<button mat-raised-button color="primary" routerLink="/cardapio">
-  Incluir mais itens<mat-icon>add</mat-icon>
-</button>
-<button mat-flat-button color="accent" (click)="buyList.clear()">
-  Limpar<mat-icon>delete</mat-icon>
-</button>
-<button mat-flat-button>Concluir</button>
-<router-outlet></router-outlet>
+
+<main>
+  <mat-list>
+    <mat-list-item *ngFor="let item of buyList.buyList; let i = index">
+      <span>{{ item.descricao }}</span>
+      <span style="flex: 1"></span>
+      <span>{{ buyList.qntd[i] }} x</span>
+      <span>{{ item.preco | currency: "BRL" }}</span>
+    </mat-list-item>
+  </mat-list>
+  <mat-list>
+    <mat-list-item>
+      <span>Total</span>
+      <span style="flex: 1"></span>
+      <span>{{ buyList.total | currency: "BRL" }}</span>
+    </mat-list-item>
+  </mat-list>
+
+  <button mat-raised-button color="primary" routerLink="/cardapio">
+    Incluir mais itens<mat-icon>add</mat-icon>
+  </button>
+  <button mat-flat-button color="accent" (click)="buyList.clear()">
+    Limpar<mat-icon>delete</mat-icon>
+  </button>
+  <button mat-flat-button color="warn">Concluir</button>
+</main>

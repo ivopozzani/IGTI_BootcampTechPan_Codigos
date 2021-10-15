@@ -1,0 +1,9 @@
+main {
+  width: 100%;
+  position: absolute;
+  top: 64px;
+}
+
+span {
+  margin-left: 5px;
+}
