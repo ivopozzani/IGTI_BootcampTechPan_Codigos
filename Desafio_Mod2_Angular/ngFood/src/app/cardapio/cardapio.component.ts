@@ -1,12 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { BuyList } from '../buyList.service';
-
-interface Cardapio {
-  categoria: string;
-  descricao: string;
-  preco: number;
-}
+import { IProduto } from '../produto';
 
 @Component({
   selector: 'cardapio',
@@ -19,11 +14,11 @@ export class CardapioComponent implements OnInit {
     this.buyList = buyList;
   }
 
-  cardapio: Cardapio[] = [];
+  cardapio: IProduto[] = [];
 
   ngOnInit(): void {
     this.httpClient
-      .get<Cardapio[]>('http://localhost:3000/cardapio')
+      .get<IProduto[]>('http://localhost:3000/cardapio')
       .subscribe((cardapio) => {
         this.cardapio = cardapio;
       });

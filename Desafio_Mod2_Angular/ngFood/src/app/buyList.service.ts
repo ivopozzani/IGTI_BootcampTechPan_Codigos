@@ -1,21 +1,16 @@
 import { Injectable } from '@angular/core';
-
-interface ItemToBuy {
-  categoria: string;
-  descricao: string;
-  preco: number;
-}
+import { IProduto } from './produto';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BuyList {
-  buyList: ItemToBuy[] = [];
+  buyList: IProduto[] = [];
   qntd: number[] = [];
   count: number = 0;
   total: number = 0;
 
-  add(item: ItemToBuy) {
+  add(item: IProduto) {
     if (this.buyList.indexOf(item) == -1) {
       this.buyList.push(item);
       this.qntd.push(1);
