@@ -23,4 +23,16 @@ export class CardapioComponent implements OnInit {
         this.cardapio = cardapio;
       });
   }
+
+  adicionaProduto(produto: IProduto) {
+    this.buyList.add(produto);
+  }
+
+  get quantidadeTotal(): number {
+    return this.buyList.getQuantidadeTotal();
+  }
+
+  get valorTotal(): number {
+    return this.buyList.getValorTotal();
+  }
 }

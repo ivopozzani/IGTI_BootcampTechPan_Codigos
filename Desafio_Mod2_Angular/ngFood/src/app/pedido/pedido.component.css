@@ -4,6 +4,7 @@ main {
   top: 64px;
 }
 
-span {
+span,
+.button {
   margin-left: 5px;
 }

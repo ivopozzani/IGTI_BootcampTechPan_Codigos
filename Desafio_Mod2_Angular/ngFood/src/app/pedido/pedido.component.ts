@@ -12,4 +12,16 @@ export class PedidoComponent implements OnInit {
     this.buyList = buyList;
   }
   ngOnInit(): void {}
+
+  get itens() {
+    return this.buyList.getItens();
+  }
+
+  get valorTotal(): number {
+    return this.buyList.getValorTotal();
+  }
+
+  limpaPedido() {
+    this.buyList.clear();
+  }
 }

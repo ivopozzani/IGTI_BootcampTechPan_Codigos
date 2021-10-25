@@ -1,33 +1,52 @@
 import { Injectable } from '@angular/core';
 import { IProduto } from './produto';
 
+interface IItemPedido {
+  quantidade: number;
+  produto: IProduto;
+}
+
 @Injectable({
   providedIn: 'root',
 })
 export class BuyList {
-  buyList: IProduto[] = [];
-  qntd: number[] = [];
-  count: number = 0;
-  total: number = 0;
+  private buyList: IItemPedido[] = [];
 
-  add(item: IProduto) {
-    if (this.buyList.indexOf(item) == -1) {
-      this.buyList.push(item);
-      this.qntd.push(1);
-      this.total = this.total + item.preco;
-      this.count++;
+  add(produto: IProduto) {
+    const item = this.buyList.find(
+      (item) => item.produto.descricao === produto.descricao
+    );
+    if (item) {
+      item.quantidade++;
     } else {
-      const i = this.buyList.indexOf(item);
-      this.qntd[i] = this.qntd[i] + 1;
-      this.total = this.total + item.preco;
-      this.count++;
+      this.buyList.push({
+        quantidade: 1,
+        produto,
+      });
     }
+  }
+
+  getQuantidadeTotal(): number {
+    let total = 0;
+    for (const item of this.buyList) {
+      total += item.quantidade;
+    }
+    return total;
+  }
+
+  getValorTotal(): number {
+    let total = 0;
+    for (const item of this.buyList) {
+      total += item.quantidade * item.produto.preco;
+    }
+    return total;
+  }
+
+  getItens() {
+    return this.buyList;
   }
 
   clear() {
     this.buyList = [];
-    this.qntd = [];
-    this.total = 0;
-    this.count = 0;
   }
 }

@@ -3,13 +3,13 @@
     <h2>Cardápio</h2>
   </mat-toolbar-row>
   <mat-toolbar-row>
-    <mat-icon [matBadge]="buyList.count" matBadgeColor="warn"
+    <mat-icon [matBadge]="quantidadeTotal" matBadgeColor="warn"
       >shopping_cart</mat-icon
     >
     <span style="flex: 1"></span>
     <button mat-stroked-button routerLink="/pedido">Ver Pedido</button>
     <span style="flex: 1"></span>
-    <span>{{ buyList.total | currency: "BRL" }}</span>
+    <span>{{ valorTotal | currency: "BRL" }}</span>
   </mat-toolbar-row>
 </mat-toolbar>
 
@@ -21,7 +21,7 @@
       >
         <div mat-subheader style="color: #e91e63">{{ item.categoria }}</div>
       </ng-container>
-      <button mat-list-item color="primary" (click)="buyList.add(cardapio[i])">
+      <button mat-list-item color="primary" (click)="adicionaProduto(item)">
         <span>{{ item.descricao }}</span>
         <span style="flex: 1"></span>
         <span>{{ item.preco | currency: "BRL" }}</span>
