@@ -28,9 +28,9 @@ function handleInterestRate () {
     const jurosTabela = sDevedor*jurosF
     const total = rAmortiza+jurosTabela
 
-    if (u === 1) return rAmortiza.toFixed(2);
-    if (u === 2) return jurosTabela.toFixed(2);
-    if (u === 3) return total.toFixed(2);    
+    if (u === 1) {return rAmortiza.toFixed(2);}
+    else if (u === 2) {return jurosTabela.toFixed(2);}
+    else if (u === 3) {return total.toFixed(2);}
   }
 
   // Construção da tabela //
