@@ -9,10 +9,7 @@ import { IProduto } from '../produto';
   styleUrls: ['./cardapio.component.css'],
 })
 export class CardapioComponent implements OnInit {
-  buyList: BuyList;
-  constructor(private httpClient: HttpClient, buyList: BuyList) {
-    this.buyList = buyList;
-  }
+  constructor(private httpClient: HttpClient, private buyList: BuyList) {}
 
   cardapio: IProduto[] = [];
 

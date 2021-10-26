@@ -23,15 +23,10 @@
     <button class="button" mat-raised-button routerLink="/cardapio">
       Incluir mais itens<mat-icon>add</mat-icon>
     </button>
-    <button
-      class="button"
-      mat-flat-button
-      color="accent"
-      (click)="limpaPedido()"
-    >
+    <button class="button" mat-flat-button color="warn" (click)="limpaPedido()">
       Limpar<mat-icon>delete</mat-icon>
     </button>
     <span style="flex: 1"></span>
-    <button mat-flat-button color="warn">Concluir</button>
+    <button mat-flat-button color="accent">Concluir</button>
   </mat-toolbar>
 </main>

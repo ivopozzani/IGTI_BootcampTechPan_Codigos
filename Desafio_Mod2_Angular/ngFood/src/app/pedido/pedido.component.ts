@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BuyList } from '../buyList.service';
 
 @Component({
@@ -6,12 +6,8 @@ import { BuyList } from '../buyList.service';
   templateUrl: './pedido.component.html',
   styleUrls: ['./pedido.component.css'],
 })
-export class PedidoComponent implements OnInit {
-  buyList: BuyList;
-  constructor(buyList: BuyList) {
-    this.buyList = buyList;
-  }
-  ngOnInit(): void {}
+export class PedidoComponent {
+  constructor(private buyList: BuyList) {}
 
   get itens() {
     return this.buyList.getItens();
