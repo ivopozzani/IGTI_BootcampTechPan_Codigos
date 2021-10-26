@@ -1,0 +1,10 @@
+main {
+  width: 100%;
+  position: absolute;
+  top: 64px;
+}
+
+span,
+.button {
+  margin-left: 5px;
+}

@@ -1,0 +1,31 @@
+<mat-toolbar class="header" color="primary">
+  <mat-toolbar-row>
+    <h2>Cardápio</h2>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <mat-icon [matBadge]="quantidadeTotal" matBadgeColor="warn"
+      >shopping_cart</mat-icon
+    >
+    <span style="flex: 1"></span>
+    <button mat-stroked-button routerLink="/pedido">Ver Pedido</button>
+    <span style="flex: 1"></span>
+    <span>{{ valorTotal | currency: "BRL" }}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<main>
+  <mat-action-list>
+    <ng-container *ngFor="let item of cardapio; let i = index">
+      <ng-container
+        *ngIf="i === 0 || item.categoria !== cardapio[i - 1].categoria"
+      >
+        <div mat-subheader style="color: #e91e63">{{ item.categoria }}</div>
+      </ng-container>
+      <button mat-list-item color="primary" (click)="adicionaProduto(item)">
+        <span>{{ item.descricao }}</span>
+        <span style="flex: 1"></span>
+        <span>{{ item.preco | currency: "BRL" }}</span>
+      </button>
+    </ng-container>
+  </mat-action-list>
+</main>
