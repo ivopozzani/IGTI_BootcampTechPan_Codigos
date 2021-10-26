@@ -7,7 +7,11 @@ let checkedList = []
 
 function fetchJson(url) {
  return fetch(url).then((r) => {
-    return r.json();
+   if (r.ok) {
+     return r.json();
+   } else {
+     throw new Error("Erro ao carregar dados" + r.statusText);
+   }
   });
 }
   
@@ -44,7 +48,13 @@ function myTable(employees, roles){
 function myTableFiltered (employees, roles) {  
   let filtered = []
   
-  filtered = employees.filter((employee) => {return checkedList[0] == employee.role_id || checkedList[1] == employee.role_id || checkedList[2] == employee.role_id || checkedList[3] == employee.role_id || checkedList[4] == employee.role_id || checkedList[5] == employee.role_id || checkedList[6] == employee.role_id || checkedList[7] == employee.role_id || checkedList[8] == employee.role_id || checkedList[9] == employee.role_id || checkedList[10] == employee.role_id || checkedList[11] == employee.role_id})
+  filtered = employees.filter((employee) => {
+    if (checkedList.length === 0) {
+      return true;
+    } else {
+      return checkedList.indexOf(employee.role_id) !== -1;
+    }
+  })
   
   if (sort.value === 'Nome descendente') {filtered.sort((a, b) => {
     if (a.name > b.name) {return -1}
@@ -69,7 +79,7 @@ function tableToHTML () {
   checkedList = []
   const checked = document.querySelectorAll('.filterOptions input:checked')
 
-  for (let i = 0 ; i < checked.length ; i++) checkedList.push(checked[i].attributes['data-roleid'].value)
+  for (let i = 0 ; i < checked.length ; i++) checkedList.push(parseInt(checked[i].attributes['data-roleid'].value))
 
   if (checkedList.length == 0) {let table = myTable(employeeslist, roleslist);
                               document.querySelector('.tbody').innerHTML = table; }
