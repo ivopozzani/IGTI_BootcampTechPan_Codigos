@@ -17,7 +17,7 @@ public class ClienteService implements ClienteRepository {
 	@Override
 	public List<Cliente> findAll() {
 		
-		return null;
+		return lista;
 	}
 
 	@Override
