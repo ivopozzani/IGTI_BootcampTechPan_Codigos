@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #bbb;
+  overflow-y: scroll;
+}
+
+app-root {
+  display: block;
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.ml {
+  margin-left: 16px;
+}
+
+.mr {
+  margin-right: 16px;
+}
+
+.fs-small {
+  font-size: smaller;
+}
