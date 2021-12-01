@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 import { Produto } from '../produto'
+import { Pedido } from '../pedido'
+
+const urlBase = 'http://localhost:8080'
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +29,13 @@ export class PedidoService {
   }
 
   buscaProdutos() {
-    return this.httpClient.get<Produto[]>('http://localhost:8080/cardapio')
+    return this.httpClient.get<Produto[]>(urlBase + '/cardapio')
+  }
+
+  realizaPedido() {
+    return this.httpClient.post<Pedido[]>(urlBase + '/pedidos', {
+      itens: this.itens
+    })
   }
 
   get valorTotal() {

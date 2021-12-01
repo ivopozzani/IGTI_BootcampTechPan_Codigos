@@ -13,13 +13,13 @@
       <span class="flex-1">{{ item.produto.descricao }}</span>
       <span
         >{{ item.quantidade }} &times; R$
-        {{ item.produto.preco | number: "0.2-2" }}</span
+        {{ item.produto.preco | number: '0.2-2' }}</span
       >
     </mat-list-item>
   </ng-container>
   <mat-list-item>
     <strong class="flex-1">Total</strong>
-    <strong>R$ {{ pedidoService.valorTotal | number: "0.2-2" }}</strong>
+    <strong>R$ {{ pedidoService.valorTotal | number: '0.2-2' }}</strong>
   </mat-list-item>
 </mat-list>
 
@@ -30,5 +30,7 @@
     Limpar
   </button>
   <span class="flex-1"></span>
-  <button mat-raised-button color="accent">Concluir</button>
+  <button mat-raised-button color="accent" (click)="realizaPedido()">
+    Concluir
+  </button>
 </mat-toolbar>
