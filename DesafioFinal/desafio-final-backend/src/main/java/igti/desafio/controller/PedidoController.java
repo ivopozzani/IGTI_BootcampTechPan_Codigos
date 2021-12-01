@@ -30,7 +30,7 @@ public class PedidoController {
 		
 	@GetMapping("/pedidos/{idPedido}")
 	public Pedido obtemPedido(@PathVariable Integer idPedido) {
-		return pedidoRepository.getById(idPedido);
+		return pedidoRepository.findById(idPedido).orElse(null);
 		
 	}
 
