@@ -18,6 +18,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { AcompanharPedidoComponent } from './acompanhar-pedido/acompanhar-pedido.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
+import { AtualizarPedidoComponent } from './atualizar-pedido/atualizar-pedido.component';
 registerLocaleData(localePt);
 
 @NgModule({
@@ -26,7 +27,8 @@ registerLocaleData(localePt);
     CardapioComponent,
     PedidoComponent,
     AcompanharPedidoComponent,
-    PedidosComponent
+    PedidosComponent,
+    AtualizarPedidoComponent
   ],
   imports: [
     BrowserModule,
