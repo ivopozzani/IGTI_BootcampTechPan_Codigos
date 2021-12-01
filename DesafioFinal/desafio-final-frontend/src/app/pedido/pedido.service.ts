@@ -37,7 +37,7 @@ export class PedidoService {
   }
 
   realizaPedido() {
-    return this.httpClient.post<Pedido[]>(urlBase + '/pedidos', {
+    return this.httpClient.post<Pedido>(urlBase + '/pedidos', {
       itens: this.itens
     })
   }

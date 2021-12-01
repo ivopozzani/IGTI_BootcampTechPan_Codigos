@@ -1,5 +1,15 @@
+<div class="header">
+  <mat-toolbar color="primary">
+    <span>Acompanhe seu pedido</span>
+  </mat-toolbar>
+</div>
 <div *ngIf="pedido">
   <div>Id: {{ pedido.id }}</div>
   <div>Data e Hora: {{ pedido.dataHora }}</div>
   <div>Situação: {{ pedido.situacao }}</div>
 </div>
+
+<mat-toolbar>
+  <a routerLink="/cardapio" mat-raised-button>Voltar para cardapio</a>
+  <span class="ml"></span>
+</mat-toolbar>

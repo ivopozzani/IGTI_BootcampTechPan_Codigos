@@ -1,6 +1,13 @@
-<a
-  *ngFor="let pedido of pedidos"
-  [routerLink]="['/pedidos', pedido.id, 'atualizar']"
->
-  {{ pedido.id }} {{ pedido.situacao }}
-</a>
+<div class="header">
+  <mat-toolbar color="primary">
+    <span>Gerenciar pedidos</span>
+  </mat-toolbar>
+</div>
+<mat-nav-list>
+  <ng-container *ngFor="let pedido of pedidos">
+    <a [routerLink]="['/pedidos', pedido.id, 'atualizar']">
+      <span class="flex-1">Pedido {{ pedido.id }}</span>
+      <span>{{ pedido.situacao }}</span>
+    </a>
+  </ng-container>
+</mat-nav-list>
