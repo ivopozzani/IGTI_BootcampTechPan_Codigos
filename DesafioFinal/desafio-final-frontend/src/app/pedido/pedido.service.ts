@@ -33,7 +33,7 @@ export class PedidoService {
   }
 
   buscaPedidos() {
-    return this.httpClient.get<Produto[]>(urlBase + '/pedidos')
+    return this.httpClient.get<Pedido[]>(urlBase + '/pedidos')
   }
 
   realizaPedido() {
@@ -44,6 +44,13 @@ export class PedidoService {
 
   carregaPedido(idPedido: number) {
     return this.httpClient.get<Pedido>(urlBase + '/pedidos/' + idPedido)
+  }
+
+  atualizaPedido(pedido: Pedido) {
+    return this.httpClient.put<Pedido>(
+      urlBase + '/pedidos/' + pedido.id,
+      pedido
+    )
   }
 
   get valorTotal() {

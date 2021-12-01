@@ -1,1 +1,14 @@
-<p>atualizar-pedido works!</p>
+<div *ngIf="pedido">
+  <div>Id: {{ pedido.id }}</div>
+  <div>Data e Hora: {{ pedido.dataHora }}</div>
+  <div>
+    Situação:
+    <select [(ngModel)]="pedido.situacao">
+      <option>Aguardando</option>
+      <option>Em preparação</option>
+      <option>Saiu para entrega</option>
+      <option>Entregue</option>
+    </select>
+  </div>
+  <button (click)="salva()">Salvar</button>
+</div>

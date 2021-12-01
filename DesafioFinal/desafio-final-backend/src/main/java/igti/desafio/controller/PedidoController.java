@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,8 +35,13 @@ public class PedidoController {
 	}
 	
 	@GetMapping("/pedidos")
-	public List<Pedido> obtemPedidos(@PathVariable Integer idPedido) {
+	public List<Pedido> obtemPedidos() {
 		return pedidoRepository.findAll();		
+	}
+	
+	@PutMapping("/pedidos/{idPedido}")
+	public Pedido salvaPedido(@PathVariable Integer idPedido,@RequestBody Pedido pedido) {
+		return pedidoRepository.save(pedido);		
 	}
 
 }
