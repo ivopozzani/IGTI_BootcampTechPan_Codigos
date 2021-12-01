@@ -38,6 +38,10 @@ export class PedidoService {
     })
   }
 
+  carregaPedido(idPedido: number) {
+    return this.httpClient.get<Pedido>(urlBase + '/pedidos/' + idPedido)
+  }
+
   get valorTotal() {
     let valor = 0
     for (const item of this.itens) {
