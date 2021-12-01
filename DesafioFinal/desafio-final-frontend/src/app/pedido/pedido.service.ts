@@ -32,6 +32,10 @@ export class PedidoService {
     return this.httpClient.get<Produto[]>(urlBase + '/cardapio')
   }
 
+  buscaPedidos() {
+    return this.httpClient.get<Produto[]>(urlBase + '/pedidos')
+  }
+
   realizaPedido() {
     return this.httpClient.post<Pedido[]>(urlBase + '/pedidos', {
       itens: this.itens

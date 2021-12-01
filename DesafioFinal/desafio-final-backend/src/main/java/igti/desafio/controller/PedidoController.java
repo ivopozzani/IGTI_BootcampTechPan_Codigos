@@ -1,6 +1,7 @@
 package igti.desafio.controller;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,14 +25,17 @@ public class PedidoController {
 		pedido.setDataHora(LocalDateTime.now());
 		pedido.setSituacao(Pedido.SITUACAO_AGUARDANDO);
 		
-		return pedidoRepository.save(pedido);
-		
+		return pedidoRepository.save(pedido);		
 	}
 		
 	@GetMapping("/pedidos/{idPedido}")
 	public Pedido obtemPedido(@PathVariable Integer idPedido) {
-		return pedidoRepository.findById(idPedido).get();
-		
+		return pedidoRepository.findById(idPedido).get();		
+	}
+	
+	@GetMapping("/pedidos")
+	public List<Pedido> obtemPedidos(@PathVariable Integer idPedido) {
+		return pedidoRepository.findAll();		
 	}
 
 }

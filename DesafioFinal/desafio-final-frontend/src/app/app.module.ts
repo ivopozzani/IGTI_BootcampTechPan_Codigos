@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { AcompanharPedidoComponent } from './acompanhar-pedido/acompanhar-pedido.component';
+import { PedidosComponent } from './pedidos/pedidos.component';
 registerLocaleData(localePt);
 
 @NgModule({
@@ -24,7 +25,8 @@ registerLocaleData(localePt);
     AppComponent,
     CardapioComponent,
     PedidoComponent,
-    AcompanharPedidoComponent
+    AcompanharPedidoComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,
